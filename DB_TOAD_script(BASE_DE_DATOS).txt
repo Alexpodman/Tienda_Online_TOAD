@@ -46,9 +46,11 @@ CREATE USER 'administrador'@'localhost' IDENTIFIED BY '12345678';
 GRANT ALL PRIVILEGES ON BD_TOAD.* TO 'administrador'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
-INSERT INTO usuarios (nombre, apellido, correo_electronico, contrasena, telefono)
+INSERT INTO usuarios (nombre, apellido, correo, contrasena, telefono)
 VALUES ('publico', '', '', '1234', '');
-INSERT INTO usuarios (nombre, apellido, correo_electronico, contrasena, telefono)
+INSERT INTO usuarios (nombre, apellido, correo, contrasena, telefono)
 VALUES ('administrador', '', '', '12345678', '');
+
+
 
 

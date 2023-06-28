@@ -7,5 +7,6 @@
     </head>
     <body>
         <h1>TOAD</h1>
+        <a href="MainController">Controlador</a>
     </body>
 </html>
