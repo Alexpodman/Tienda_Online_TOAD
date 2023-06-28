@@ -1,6 +1,3 @@
-<%@page import="com.emergentes.entidades.Producto"%>
-<%@page import="java.util.List"%>
-<% List<Producto> productos = (List<Producto>)request.getAttribute("productos"); %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,7 +8,7 @@
     </head>
     <body>
         <header>
-            <h1>Tienda online TOAD</h1>
+            <h1>Agregar un nuevo producto a la tienda</h1>
         </header>
         <nav>
             <div class="logo">
@@ -25,17 +22,26 @@
             </ul>
         </nav>
         <main>
-            <div class="product-list">
-                <% for (Producto producto : productos) {%>
-                <div class="product-card">
-                    <img src="imagenes/producto.jpg" alt="<%= producto.getNombre() %>"/>
-                    <h3><%= producto.getNombre() %></h3>
-                    <p><b>Categoria:</b> <%= producto.getCategoria() %></p>
-                    <p><b>Descripción:</b> <%= producto.getDescripcion() %></p>
-                    <p><b>Precio:</b> <%= producto.getPrecio() %> Bs.</p>
-                    <button>Agregar al carrito</button>
-                </div>
-                <% } %>
+            <div class="form-container">
+                <form method="post" action="MainController" class="form-agregar">
+                    <input type="hidden" name="option" value="agregarProducto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" required></textarea>
+
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" step="0.01" required>
+
+                    <label for="categoria">Categoría:</label>
+                    <input type="text" id="categoria" name="categoria" required>
+
+                    <label for="stock">Stock:</label>
+                    <input type="number" id="stock" name="stock" required>
+
+                    <input type="submit" value="Agregar">
+                </form>
             </div>
         </main>
         <footer>

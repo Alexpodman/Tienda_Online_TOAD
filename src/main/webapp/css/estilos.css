@@ -71,35 +71,155 @@ nav {
 }
 
 footer {
-  background-color: #f8f8f8;
-  padding: 20px 0;
-  text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-contact,
 .footer-links,
 .footer-info {
-  margin: 10px;
+    margin: 10px;
 }
 
 .footer-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
 }
 
 .footer-info a {
-  text-decoration: none;
-  color: #666;
+    text-decoration: none;
+    color: #666;
 }
 
 .footer-info a:hover {
-  color: #333;
+    color: #333;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+}
+
+.product-table td {
+    text-align: center;
+}
+
+/* formularios estilos botones editar eliminar*/
+.editar {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.editar input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.eliminar {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.eliminar input[type="submit"] {
+    background-color: #F01A1A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.agregar {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.agregar input[type="submit"] {
+    background-color: #2F85F9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* formulario agregar*/
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form-container textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
 }
