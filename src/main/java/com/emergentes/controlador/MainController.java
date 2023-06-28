@@ -6,6 +6,7 @@ package com.emergentes.controlador;
 
 import com.emergentes.bean.BeanAcceso;
 import com.emergentes.dao.UsuarioJpaController;
+import com.emergentes.entidades.Producto;
 import com.emergentes.entidades.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,33 +29,32 @@ public class MainController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        BeanAcceso dao = new BeanAcceso();
         String opcion = request.getParameter("opcion");
         if (opcion != null) {
-            if (opcion.equals("editarUsuario")) {
-                
+            if (opcion.equals("inicio")) {
+                List<Producto> productos = dao.getDaoProductos().findProductoEntities();
+                request.setAttribute("productos", productos);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
             } else if (opcion.equals("")) {
-                
+
             } else if (opcion.equals("")) {
-                
+
             } else if (opcion.equals("")) {
-                
+
             } else if (opcion.equals("")) {
-                
+
             } else if (opcion.equals("")) {
-                
+
             } else if (opcion.equals("")) {
-                
+
             } else if (opcion.equals("")) {
-                
+
             }
         } else {
+            List<Producto> productos = dao.getDaoProductos().findProductoEntities();
+            request.setAttribute("productos", productos);
             request.getRequestDispatcher("index.jsp").forward(request, response);
-        }
-        
-        BeanAcceso dao = new BeanAcceso();
-        List<Usuario> listaUsuarios = dao.getDaoUsuarios().findUsuarioEntities();
-        for (Usuario u : listaUsuarios) {
-            System.out.println("nombre: " + u.getNombre());
         }
     }
 

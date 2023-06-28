@@ -1,3 +1,6 @@
+<%@page import="com.emergentes.entidades.Producto"%>
+<%@page import="java.util.List"%>
+<% List<Producto> productos = (List<Producto>)request.getAttribute("productos"); %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,13 +28,16 @@
         </nav>
         <main>
             <div class="product-list">
+                <% for (Producto producto : productos) {%>
                 <div class="product-card">
                     <img src="producto1.jpg" alt="Producto 1">
-                    <h3>Producto 1</h3>
-                    <p>Descripción del producto 1</p>
-                    <p>Precio: $19.99</p>
+                    <h3><%= producto.getNombre() %></h3>
+                    <p><b>Categoria:</b> <%= producto.getCategoria() %></p>
+                    <p><b>Descripción:</b> <%= producto.getDescripcion() %></p>
+                    <p><b>Precio:</b> <%= producto.getPrecio() %> Bs.</p>
                     <button>Agregar al carrito</button>
                 </div>
+                <% } %>
             </div>
         </main>
         <footer>

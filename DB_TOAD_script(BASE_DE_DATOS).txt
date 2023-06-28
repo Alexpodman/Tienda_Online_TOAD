@@ -48,9 +48,18 @@ FLUSH PRIVILEGES;
 
 INSERT INTO usuarios (nombre, apellido, correo, contrasena, telefono)
 VALUES ('publico', '', '', '1234', '');
+
 INSERT INTO usuarios (nombre, apellido, correo, contrasena, telefono)
 VALUES ('administrador', '', '', '12345678', '');
 
 
+INSERT INTO productos (nombre, descripcion, precio, categoria, stock)
+VALUES ('Patineta', 'Patineta Original Marca Stick con repuestos incluidos', 255.00, 'Jueguetes', 50);
+
+INSERT INTO productos (nombre, descripcion, precio, categoria, stock)
+VALUES ('Play Station 5 Slim', 'Play Station 5 con 5 juegos incluidos totalmente nuevo version delgada', 6900.00, 'Consolas', 120);
+
+INSERT INTO productos (nombre, descripcion, precio, categoria, stock)
+VALUES ('TV Samsung 55"', 'Pantalla OLED Samsung curvo de 55 pulgadas smart con wifi 5', 3150.99, 'Televisores', 70);
 
 
